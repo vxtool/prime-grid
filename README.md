@@ -7,7 +7,7 @@
 
 - [Float](source/float/)
 - [Flexbox](source/flexbox/)
-- Grid property (source/grid-property/)
+- [Grid property](source/grid-property/)
 - Semantic grid (source/semantic-grid/)
 
 
