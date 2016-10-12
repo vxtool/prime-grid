@@ -5,10 +5,10 @@
 
 ## Grids
 
-- [Float](float/)
-- Flexbox (flexbox/)
-- Grid property (grid-property/)
-- Semantic grid (semantic-grid/)
+- [Float](source/float/)
+- [Flexbox](source/flexbox/)
+- Grid property (source/grid-property/)
+- Semantic grid (source/semantic-grid/)
 
 
 ## Contributing
