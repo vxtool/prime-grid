@@ -6,6 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css" media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      *,
+      :after,
+      :before,
+      html{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body { font-family: Arial, sans-serif; }
+
+      [class*="col-"] {
+        background: #ccc;
+        border: 1px solid #ddd;
+        color: #333;
+        font-size: 12px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+      }
+
+      .container {
+        margin: 10px auto;
+        max-width: 1200px;
+      }
+    </style>
     <script type="text/javascript">
       // to identify if javascript is active
       var tagHtml = document.getElementsByTagName("html")[0];
@@ -13,6 +45,61 @@
     </script>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
+        <div class="col-xs-1">1</div>
 
+        <div class="col-xs-2">2</div>
+        <div class="col-xs-2">2</div>
+        <div class="col-xs-2">2</div>
+        <div class="col-xs-2">2</div>
+        <div class="col-xs-2">2</div>
+        <div class="col-xs-2">2</div>
+
+        <div class="col-xs-3">3</div>
+        <div class="col-xs-3">3</div>
+        <div class="col-xs-3">3</div>
+        <div class="col-xs-3">3</div>
+
+        <div class="col-xs-4">4</div>
+        <div class="col-xs-4">4</div>
+        <div class="col-xs-4">4</div>
+
+        <div class="col-xs-5">5</div>
+        <div class="col-xs-5">5</div>
+        <div class="col-xs-2">2</div>
+
+        <div class="col-xs-6">6</div>
+        <div class="col-xs-6">6</div>
+
+        <div class="col-xs-7">7</div>
+        <div class="col-xs-5">5</div>
+
+        <div class="col-xs-8">8</div>
+        <div class="col-xs-4">4</div>
+
+        <div class="col-xs-9">9</div>
+        <div class="col-xs-3">3</div>
+
+        <div class="col-xs-10">10</div>
+        <div class="col-xs-2">2</div>
+
+        <div class="col-xs-11">11</div>
+        <div class="col-xs-1">1</div>
+
+        <div class="col-xs-12">12</div>
+      </div>
+    </div>
   </body>
 </html>

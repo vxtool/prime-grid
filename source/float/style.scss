@@ -28,6 +28,16 @@ $push : 0 !default;
   @return ($total-width / $total-columns) * $columns;
 }
 
+/// Row
+.row {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+/// Columns
 [class*="col-"] {
     display: inline;
     float: left;
