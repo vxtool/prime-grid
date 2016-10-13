@@ -7,6 +7,8 @@
 
 - [Float](source/float/)
 - [Flexbox](source/flexbox/)
+- [Display inline block](source/display-inline-block/)
+- [Display table](source/display-table/)
 - [Grid property](source/grid-property/)
 - Semantic grid (source/semantic-grid/)
 

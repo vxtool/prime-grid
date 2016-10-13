@@ -39,10 +39,10 @@ $push : 0 !default;
 
 /// Columns
 [class*="col-"] {
-    display: inline;
-    float: left;
-    padding-left: $padding-width;
-    padding-right: $padding-width;
+  display: inline;
+  float: left;
+  padding-left: $padding-width;
+  padding-right: $padding-width;
 }
 
 // Extra small 320
