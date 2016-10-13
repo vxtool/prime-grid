@@ -1,0 +1,91 @@
+/// Breakpoints
+///
+/// Smartphones (portrait)
+$screen-phone-portrait: 320px !default;
+/// Smartphones (landscape)
+$screen-phone-landscape: 480px !default;
+/// Small tablet
+$screen-tablet-small: 600px !default;
+/// Tablet (portrait)
+$screen-tablet-portrait: 768px !default;
+/// Tablet (landscape) / Desktop
+$screen-desktop: 992px !default;
+/// Wide
+$screen-wide: 1300px !default;
+
+/// Grid config
+///
+$total-width : 100%;
+$total-columns : 12;
+$padding-width : 10px;
+$columns : 12;
+$push : 0 !default;
+
+///
+/// @param {number} $columns
+///
+@function x-gridsystem-width($columns) {
+  @return ($total-width / $total-columns) * $columns;
+}
+
+/// Row
+.row {
+  // “font-size: 0;” is applied to the container to collapse white-space between items.
+  font-size: 0;
+  padding: 2% 2% 0;
+  text-align: justify;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+/// Columns
+[class*="col-"] {
+  display: inline-block;
+  padding-left: $padding-width;
+  padding-right: $padding-width;
+  text-align: left;
+}
+
+// Extra small 320
+@for $i from 1 through $total-columns {
+    .col-xs-#{$i} { width: x-gridsystem-width($i); }
+}
+
+@for $i from 1 through $total-columns {
+    .col-xs-offset-#{$i} { margin-left: x-gridsystem-width($i); }
+}
+
+// Small 768
+@media(min-width:$screen-tablet-portrait) {
+  @for $i from 1 through $total-columns {
+    .col-sm-#{$i} { width: x-gridsystem-width($i); }
+  }
+
+  @for $i from 1 through $total-columns {
+    .col-sm-offset-#{$i} { margin-left: x-gridsystem-width($i); }
+  }
+}
+// Medium 992
+@media(min-width:$screen-desktop) {
+  @for $i from 1 through $total-columns {
+    .col-md-#{$i} { width: x-gridsystem-width($i); }
+  }
+
+  @for $i from 1 through $total-columns {
+    .col-md-offset-#{$i} { margin-left: x-gridsystem-width($i); }
+  }
+}
+// Large 1300
+@media(min-width:$screen-wide) {
+  @for $i from 1 through $total-columns {
+    .col-lg-#{$i} { width: x-gridsystem-width($i); }
+  }
+
+  @for $i from 1 through $total-columns {
+    .col-lg-offset-#{$i} { margin-left: x-gridsystem-width($i); }
+  }
+}
