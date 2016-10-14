@@ -10,6 +10,7 @@
 - [Display inline block](source/display-inline-block/)
 - [Display table](source/display-table/)
 - [Grid layout](source/grid-layout/)
+  - Navigate to `about:config`, search for the `layout.css.grid.enabled` flag, then double click or press enter to toggle it to `true`.
 - Semantic grid (source/semantic-grid/)
 
 
