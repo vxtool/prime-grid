@@ -30,12 +30,13 @@ $push : 0 !default;
 
 /// Row
 .row {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-definition-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
+
+.row1 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+.row2 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+.row3 { grid-template-columns: 1fr 1fr 1fr 1fr; }
 
 /// Columns
 [class*="col-"] {
@@ -44,55 +45,16 @@ $push : 0 !default;
 }
 
 // Extra small 320
-@for $i from 1 through $total-columns {
-  .col-xs-#{$i} {
-    -ms-grid-column: $i;
-    grid-column: $i;
-    -ms-grid-row: $i;
-    grid-row: $i;
-  }
-}
-
-@for $i from 1 through $total-columns {
-    .col-xs-offset-#{$i} { margin-left: x-gridsystem-width($i); }
-}
 
 // Small 768
 @media(min-width:$screen-tablet-portrait) {
-  @for $i from 1 through $total-columns {
-    .col-sm-#{$i} {
-      -ms-grid-column: $i;
-      grid-column: $i;
-    }
-  }
 
-  @for $i from 1 through $total-columns {
-    .col-sm-offset-#{$i} { margin-left: x-gridsystem-width($i); }
-  }
 }
 // Medium 992
 @media(min-width:$screen-desktop) {
-  @for $i from 1 through $total-columns {
-    .col-md-#{$i} {
-      -ms-grid-column: $i;
-      grid-column: $i;
-    }
-  }
 
-  @for $i from 1 through $total-columns {
-    .col-md-offset-#{$i} { margin-left: x-gridsystem-width($i); }
-  }
 }
 // Large 1300
 @media(min-width:$screen-wide) {
-  @for $i from 1 through $total-columns {
-    .col-lg-#{$i} {
-      -ms-grid-column: $i;
-      grid-column: $i;
-    }
-  }
 
-  @for $i from 1 through $total-columns {
-    .col-lg-offset-#{$i} { margin-left: x-gridsystem-width($i); }
-  }
 }
