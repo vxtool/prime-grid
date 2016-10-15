@@ -1,0 +1,68 @@
+/// Breakpoints
+///
+/// Smartphones (portrait)
+$screen-phone-portrait: 320px !default;
+/// Smartphones (landscape)
+$screen-phone-landscape: 480px !default;
+/// Small tablet
+$screen-tablet-small: 600px !default;
+/// Tablet (portrait)
+$screen-tablet-portrait: 768px !default;
+/// Tablet (landscape) / Desktop
+$screen-desktop: 992px !default;
+/// Wide
+$screen-wide: 1300px !default;
+
+/// Grid config
+///
+$total-width : 100%;
+$total-columns : 12;
+$padding-width : 10px;
+$columns : 12;
+$push : 0 !default;
+
+///
+/// @param {number} $columns
+///
+@function x-gridsystem-width($columns) {
+  @return ($total-width / $total-columns) * $columns;
+}
+
+// Coluna do grid
+///
+/// @param {number} $columns
+/// @param {number} $push
+/// @param {string} $fold [left]
+///
+@mixin x-column($columns:$columns, $push:$push, $fold:left) {
+  display: inline;
+  float: $fold;
+  width: x-gridsystem-width($columns);
+  padding-left: $padding-width;
+  padding-right: $padding-width;
+
+  @if $fold == left {
+    margin-left:x-gridsystem-width($push);
+  }
+  @if $fold == right {
+    margin-right:x-gridsystem-width($push);
+  }
+}
+
+
+// Extra small 320
+.box {
+  @include x-column(12);
+  // Small 768
+  @media(min-width:$screen-tablet-portrait) {
+    width: x-gridsystem-width(6);
+  }
+  // Medium 992
+  @media(min-width:$screen-desktop) {
+    width: x-gridsystem-width(4);
+  }
+  // Large 1300
+  @media(min-width:$screen-wide) {
+    width: x-gridsystem-width(3);
+  }
+}

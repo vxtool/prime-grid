@@ -1,0 +1,18 @@
+.box {
+  display: inline;
+  float: left;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 0%;
+}
+
+@media (min-width: 768px) {
+  .box { width: 50%; }
+}
+@media (min-width: 992px) {
+  .box { width: 33.33333%; }
+}
+@media (min-width: 1300px) {
+  .box { width: 25%; }
+}
